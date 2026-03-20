@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://stockmarket-3z4v.onrender.com',
+        target: 'https://stockmarket-3jwa.onrender.com',
         changeOrigin: true,
       },
     },
