@@ -1,0 +1,382 @@
+.watchlist-root {
+  background: #111827;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.7);
+  max-height: calc(100vh - 110px);
+}
+
+.watchlist-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.watchlist-header h2 {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.watchlist-search {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.watchlist-section {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.watchlist-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.12em;
+  margin-bottom: 4px;
+}
+
+.watchlist-list {
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.watchlist-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2px;
+  padding: 8px 8px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  position: relative;
+}
+
+.watchlist-row:hover {
+  background: rgba(31, 41, 55, 0.9);
+}
+
+.watchlist-row-active {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.28), rgba(59, 130, 246, 0.05));
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.8);
+}
+
+.watchlist-empty-state {
+  padding: 12px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 6px;
+}
+
+.watchlist-row-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.watchlist-row-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.watchlist-symbol {
+  font-weight: 600;
+}
+
+.watchlist-price {
+  font-variant-numeric: tabular-nums;
+  color: #e5e7eb;
+}
+
+.watchlist-name {
+  max-width: 150px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.watchlist-change {
+  font-variant-numeric: tabular-nums;
+}
+
+.watchlist-change-pos {
+  color: #4ade80;
+}
+
+.watchlist-change-neg {
+  color: #f97373;
+}
+
+.watchlist-delayed {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(55, 65, 81, 0.9);
+  color: #e5e7eb;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Prediction Panel Styles */
+.pred-root {
+  background: #111827;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.7);
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+.pred-header {
+  margin-bottom: 10px;
+}
+
+.pred-header h2 {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Trading Recommendation Card */
+.pred-recommendation {
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 2px solid;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.pred-rec-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.pred-rec-emoji {
+  font-size: 20px;
+}
+
+.pred-rec-text {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pred-rec-reason {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.pred-rec-buy {
+  border-color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  color: #86efac;
+}
+
+.pred-rec-sell {
+  border-color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+  color: #fca5a5;
+}
+
+.pred-rec-hold {
+  border-color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  color: #fcd34d;
+}
+
+.pred-rec-wait {
+  border-color: #94a3b8;
+  background: rgba(148, 163, 184, 0.1);
+  color: #cbd5e1;
+}
+
+.pred-rec-neutral {
+  border-color: #64748b;
+  background: rgba(100, 116, 139, 0.1);
+  color: #cbd5e1;
+}
+
+.pred-card {
+  background: #0f172a;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.pred-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.1em;
+  margin-bottom: 3px;
+}
+
+.pred-value {
+  font-size: 14px;
+  color: #e5e7eb;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.pred-symbol {
+  font-size: 16px;
+  color: #60a5fa;
+  margin-bottom: 8px;
+}
+
+.pred-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.pred-direction-up {
+  color: #4ade80;
+}
+
+.pred-direction-down {
+  color: #f87171;
+}
+
+.pred-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.pred-meta > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.pred-value-small {
+  font-size: 11px;
+  color: #9ca3af;
+  font-variant-numeric: tabular-nums;
+}
+
+.pred-history {
+  margin-top: 12px;
+}
+
+.pred-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.pred-history-header h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.pred-history-accuracy {
+  font-size: 11px;
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.pred-history-table {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+}
+
+.pred-history-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.7fr 1fr;
+  gap: 4px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  align-items: center;
+  color: #cbd5e1;
+}
+
+.pred-history-row-header {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px;
+}
+
+.pred-history-row:not(.pred-history-row-header):hover {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.pred-history-ok {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.pred-history-bad {
+  color: #f87171;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .watchlist-root {
+    max-height: 250px;
+    margin-bottom: 10px;
+  }
+  .pred-root {
+    max-height: none;
+    padding-bottom: 20px;
+  }
+  .pred-history-table {
+    min-height: 200px;
+  }
+  .pred-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

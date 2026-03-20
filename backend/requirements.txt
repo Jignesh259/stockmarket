@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pydantic
+yfinance
+pandas
+numpy
+xgboost
+slowapi
