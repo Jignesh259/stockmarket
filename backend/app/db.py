@@ -2,9 +2,15 @@ from __future__ import annotations
 
 import json
 import os
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import redis
+from dotenv import load_dotenv
+
+# Load .env file from the backend directory (parent of app/)
+_env_path = Path(__file__).resolve().parents[1] / ".env"
+load_dotenv(_env_path)
 
 
 # ---------------------------------------------------------------------------
