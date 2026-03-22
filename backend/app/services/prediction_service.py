@@ -141,7 +141,7 @@ async def process_pending_predictions_once() -> None:
         actual_direction = "UP" if actual_price >= pending.base_price else "DOWN"
         correct = actual_direction == pending.direction
 
-        # Persist outcome to SQLite for dataset/demo
+        # Persist outcome to Redis for dataset/demo
         close_prediction(pred_id=pred_id, actual_price=actual_price, correct=correct)
 
         # Keep in-memory history too (used by UI during the same run)
